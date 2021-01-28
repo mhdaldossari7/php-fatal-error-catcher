@@ -18,7 +18,7 @@ class ErrorCatcher
     {
         $error = error_get_last();
         // Fatal error, E_ERROR === 1
-        if ($error['type'] === E_ERROR) {
+        if ($error['type'] === E_ERROR || $error['type'] === E_CORE_ERROR || $error['type'] === E_COMPILE_ERROR) {
             $errMsg = "```PHP Fatal Error : " . $error['message']  . "\nin " . $error['file'] . " on line " . $error['line'] . "```";
             if (!empty($this->slackWebhookURL))
             {
