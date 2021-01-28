@@ -7,7 +7,10 @@ class ErrorCatcher
     private $slackWebhookURL;
     public function __construct(string $slackWebhookURL = '')
     {        
-        $this->slackWebhookURL = $slackWebhookURL;
+        if (!empty($slackWebhookURL))
+        {
+            $this->slackWebhookURL = $slackWebhookURL;
+        }
         register_shutdown_function([$this, 'errCatcher']);
     }
 
@@ -17,7 +20,12 @@ class ErrorCatcher
         // Fatal error, E_ERROR === 1
         if ($error['type'] === E_ERROR) {
             $errMsg = "```PHP Fatal Error : " . $error['message']  . "\nin " . $error['file'] . " on line " . $error['line'] . "```";
-            $this->sendToSlack($errMsg);
+            if (!empty($this->slackWebhookURL))
+            {
+                $this->sendToSlack($errMsg);
+            } else {
+                print($errMsg);
+            }
         }
     }
 
