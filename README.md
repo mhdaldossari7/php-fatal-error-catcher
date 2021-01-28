@@ -28,7 +28,7 @@ use FatalErrCatcher\ErrorCatcher; // import class
 
 $slackWebhookURL = "https://xxxxx"; // define slack url if you want to get notification in slack
 
-new ErrorCatcher($slackWebhookURL); // initialize object ($slackWebhookURL is optional argument)
+new ErrorCatcher($slackWebhookURL); // initialize object ($slackWebhookURL is optional argument, if you didn't provide slack_url the error message will be print in console)
 
 
 // (IMPORTANT NOTE) : You must create ErrorCatcher object at the beginning of your script, so it detects the incoming errors.
