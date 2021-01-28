@@ -1,0 +1,12 @@
+{
+	"name": "mhdaldossari7/php-fatal-err-catcher",
+	"description": "catch fatal error",
+	"autoload": {
+		"psr-4": {
+			"FatalErrCatcher\\": "src/"
+		}
+	},
+	"require-dev": {
+		"phpstan/phpstan": "0.12.3"
+	}
+}
