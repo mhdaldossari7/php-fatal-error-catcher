@@ -1,6 +1,6 @@
 {
 	"name": "mhdaldossari7/php-fatal-err-catcher",
-	"description": "catch fatal error",
+	"description": "A PHP fatal error catcher",
 	"autoload": {
 		"psr-4": {
 			"FatalErrCatcher\\": "src/"
