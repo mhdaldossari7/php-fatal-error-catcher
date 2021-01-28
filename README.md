@@ -4,8 +4,6 @@ To catch fatal errors and notify in slack.
 
 ## Installation
 
----
-
 You can install **php-fatal-err-catcher** via composer or by downloading the source.
 
 ### Via Composer:
@@ -18,8 +16,6 @@ composer require mhdaldossari7/php-fatal-err-catcher
 ```
 
 ## Usage
-
----
 
 ```php
 <?php
